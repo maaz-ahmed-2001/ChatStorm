@@ -1,0 +1,23 @@
+{
+  "name": "chatstorm",
+  "version": "1.0.0",
+  "description": "Realtime chat app with authentication using MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maaz-ahmed-2001/ChatStorm.git"
+  },
+  "author": "Maaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maaz-ahmed-2001/ChatStorm/issues"
+  },
+  "homepage": "https://github.com/maaz-ahmed-2001/ChatStorm#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
