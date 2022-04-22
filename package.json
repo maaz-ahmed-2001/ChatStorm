@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Realtime chat app with authentication using MERN stack",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js --ignore client"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,18 @@
   },
   "homepage": "https://github.com/maaz-ahmed-2001/ChatStorm#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "@chakra-ui/icons": "^1.1.7",
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
