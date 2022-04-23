@@ -18,7 +18,7 @@ function Home() {
     getData()
   }, [])
   return (
-    <Container maxW={'xl'}>
+    <Container maxW={'xl'} display="flex" flexDirection={"column"} justifyContent="center">
       <Box
         d="flex"
         justifyContent={"center"}
@@ -26,13 +26,13 @@ function Home() {
 
       >
         <Text
-          fontSize="36"
+          fontSize="38"
           fontWeight={"900"}
           fontFamily="work sans"
           color={"#fff"}
           textShadow="0px 0px 3px black"
           letterSpacing={"0.05em"}
-          margin="20px 0px"
+          margin="0px 0px 30px 0px"
         >ThatsApp
         </Text>
 
@@ -44,18 +44,19 @@ function Home() {
         borderRadius={"4px"}
         border="1px solid #5b5b5b"
         boxShadow="0px 0px 10px 2px #5b5b5b"
+        mb={"30px"}
       >
 
         <Tabs variant='soft-rounded' colorScheme='green'>
           <TabList mb={"1em"} >
-            <Tab width={"50%"} outlineColor="cyan" mr={"1.5"}>Login</Tab>
-            <Tab width={"50%"} outlineColor="cyan" ml={"1.5"}>Sign Up</Tab>
+            <Tab width={"50%"}  mr={"1.5"}>Login</Tab>
+            <Tab width={"50%"}  ml={"1.5"}>Sign Up</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel>
+            <TabPanel pt={"5px"}>
               <Login/>
             </TabPanel>
-            <TabPanel>
+            <TabPanel pt={"5px"}>
               <SignUp/>
             </TabPanel>
           </TabPanels>
