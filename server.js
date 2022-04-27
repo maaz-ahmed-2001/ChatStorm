@@ -1,7 +1,10 @@
 import Express from "express";
 import dotenv from "dotenv"
-import cors from "cors"
 import mongoose from "mongoose"
+import express from "express";
+import router from "./routes/userRoutes.js"
+import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
+
 
 dotenv.config()
 
@@ -20,7 +23,7 @@ mongoose.connection.once('open', () => {
 })
 
 
-app.use(cors())
+app.use(express.json())
 
 
 
@@ -31,9 +34,10 @@ app.get("/", (req, res) => {
 })
 
 
-app.get("/user", (req, res) => {
-    res.status(200).send(user)
-})
+app.use("/api/user", router)
+
+app.use(notFound)
+app.use(errorHandler)
 
 
 
